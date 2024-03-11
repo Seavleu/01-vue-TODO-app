@@ -1,16 +1,32 @@
-<script setup lang="ts">
-import AppHeader from "./components/AppHeader.vue";
-import TodoList from "./components/TodoList.vue";
-import ListItem from "./components/ListItem.vue";
-</script>
-
 <template>
     <AppHeader />
-    <TodoList/>
-    <ListItem/>
-</template>
-
-<style scoped>
-
-</style>
-
+    <TodoList />
+  </template>
+  
+  <script lang="ts">
+  import { defineComponent } from 'vue'
+  import AppHeader from './components/AppHeader.vue'
+  import TodoList from './components/TodoList.vue'
+  
+  export default defineComponent({
+    name: 'App',
+    components: {
+      AppHeader,
+      TodoList
+    }
+  })
+  </script>
+  
+  <style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #414f5c;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  </style>
+  
